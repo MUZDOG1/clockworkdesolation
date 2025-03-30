@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clockwork Desolation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <!-- Title Screen -->
+    <div id="titleScreen">
+      <div id="titleText">CLOCKWORK DESOLATION</div>
+      <button id="continueBtn">CONTINUE</button>
+    </div>
+
+    <!-- Main Menu -->
+    <div id="mainMenu">
+      <button class="menu-btn" id="startBtn">START</button>
+      <button class="menu-btn" id="settingsBtn">SETTINGS</button>
+      <div id="settingsMenu">
+        <label class="settings-item">
+          <input type="checkbox" id="speedrunToggle"> Enable Speedrun Clock
+        </label>
+      </div>
+    </div>
+
+    <div id="speedrunClock">00:00:00</div>
+    <div id="gameWrapper">
+      <canvas id="gameCanvas"></canvas>
+      <img id="deathGifOverlay" src="death.gif" alt="Death Animation">
+      <video id="introVideo" src="gps.mp4" playsinline muted></video>
+      <video id="womanExecutionVideo" src="womanexecution.mp4" playsinline muted></video>
+      <video id="crashVideo" src="crash.mp4" playsinline></video>
+    </div>
+  </div>
+
+  <audio id="menuMusic" loop>
+    <source src="lives.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Scripts -->
+  <script src="audio.js"></script>
+  <script src="enemies.js"></script>
+  <script src="game.js"></script>
+  <script src="menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+html, body { 
+    margin: 0; 
+    padding: 0; 
+    background: black; 
+    overflow: hidden; 
+    font-family: 'Courier New', monospace; 
+  }
+  
+  #gameContainer { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100vw; 
+    height: 100vh; 
+    background: black; 
+    overflow: hidden; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+  }
+  
+  #gameWrapper { 
+    position: relative; 
+    width: 800px; 
+    height: 600px; 
+    transform-origin: center center; 
+    transform: scale(var(--game-scale)); 
+  }
+  
+  #gameCanvas { 
+    width: 800px; 
+    height: 600px; 
+    image-rendering: -moz-crisp-edges; 
+    image-rendering: -webkit-optimize-contrast; 
+    image-rendering: pixelated; 
+  }
+  
+  #deathGifOverlay, 
+  #introVideo, 
+  #womanExecutionVideo, 
+  #crashVideo { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    pointer-events: none; 
+    display: none; 
+  }
+  
+  #deathGifOverlay { 
+    z-index: 5; 
+  }
+  
+  #introVideo { 
+    z-index: 10; 
+    background: #000; 
+  }
+  
+  #womanExecutionVideo { 
+    z-index: 11; 
+    background: #000; 
+  }
+  
+  #crashVideo { 
+    z-index: 12; 
+    background: #000; 
+  }
+  
+  /* Title screen styles */
+  #titleScreen { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: black; 
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  
+  #titleText {
+    font-size: 4em;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  #continueBtn {
+    background: #222; 
+    border: 2px solid #444; 
+    color: white; 
+    padding: 15px 30px; 
+    cursor: pointer; 
+    font-size: 1.2em; 
+    transition: all 0.3s;
+  }
+  
+  #continueBtn:hover {
+    background: #333; 
+    border-color: #666;
+  }
+  
+  /* Menu styles */
+  #mainMenu { 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 20; 
+    text-align: center; 
+    display: none; 
+  }
+  
+  .menu-btn { 
+    background: #222; 
+    border: 2px solid #444; 
+    color: white; 
+    padding: 15px 30px; 
+    margin: 10px; 
+    cursor: pointer; 
+    font-size: 1.2em; 
+    transition: all 0.3s; 
+  }
+  
+  .menu-btn:hover { 
+    background: #333; 
+    border-color: #666; 
+  }
+  
+  #settingsMenu { 
+    display: none; 
+    position: absolute; 
+    background: rgba(0,0,0,0.8); 
+    padding: 20px; 
+    border: 1px solid #444; 
+  }
+  
+  .settings-item { 
+    margin: 10px 0; 
+    color: white; 
+  }
+  
+  #speedrunClock { 
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    color: white; 
+    font-size: 1.5em; 
+    display: none; 
+    z-index: 15; 
+  }
